@@ -21,7 +21,7 @@ struct Joke: Codable, Equatable {
     
     var fullJoke: String {
         switch type {
-        case .twoPart:
+        case .twopart:
             (setup ?? "") + "\n\n" + (delivery ?? "")
 
         case .single:
@@ -30,6 +30,6 @@ struct Joke: Codable, Equatable {
     }
     
     static let single = Joke(id: 1, category: .Misc, type: .single, lang: .en, setup: nil, delivery: nil, joke: "Never date a baker they are too kneady.")
-    static let twoPart = Joke(id: 2, category: .Pun, type: .twoPart, lang: .en, setup: "What do you call a cow with no legs?", delivery: "GROUND BEEF!", joke: nil)
+    static let twoPart = Joke(id: 2, category: .Pun, type: .twopart, lang: .en, setup: "What do you call a cow with no legs?", delivery: "GROUND BEEF!", joke: nil)
     
 }

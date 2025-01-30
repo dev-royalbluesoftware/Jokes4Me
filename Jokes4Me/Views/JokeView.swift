@@ -39,7 +39,7 @@ struct JokeView: View {
                         
                         VStack(alignment: .leading) {
                             switch joke.type {
-                            case .twoPart:
+                            case .twopart:
                                 Text(joke.setup ?? "")
                                 
                                 Divider()

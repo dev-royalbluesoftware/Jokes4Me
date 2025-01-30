@@ -10,6 +10,6 @@
 import Foundation
 
 enum JokeType: String, Codable {
-case twoPart
+case twopart
 case single
 }

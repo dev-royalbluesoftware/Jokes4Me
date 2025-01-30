@@ -32,7 +32,6 @@ struct JokeContentView: View {
                 if fetchingJoke {
                     ProgressView()
                 }
-                
                 ScrollView {
                     // VStack - HStack/Refresh Button
                     VStack {
@@ -43,14 +42,12 @@ struct JokeContentView: View {
                                     Text(language.full)
                                 }
                             }
-                            
                             Picker("Category", selection: $category) {
                                 ForEach(Category.allCases) { category in
                                     Text("\(category)")
                                 }
                             }
                         }
-                        
                         Button {
                             Task {
                                 await getJoke()
@@ -71,7 +68,6 @@ struct JokeContentView: View {
                                 ShareLink(item: joke.fullJoke)
                             }
                         }
-                        
                         // HStack - Report Joke Button/Unsafe Joke Text
                         HStack(alignment: .top) {
                             if let joke {
@@ -83,7 +79,6 @@ struct JokeContentView: View {
                                     guard let url = URL(string: jokeManager.issueURL) else { return }
                                     openURL(url)
                                 }
-                                
                                 Text("You can report an unsafe joke.  The Joke id and content will be on your clipboard.")
                                     .font(.caption)
                                     .lineLimit(nil)

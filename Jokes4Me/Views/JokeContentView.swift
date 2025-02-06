@@ -48,6 +48,8 @@ struct JokeContentView: View {
                                 }
                             }
                         }
+                        .buttonStyle(.bordered)
+                        
                         Button {
                             Task {
                                 await getJoke()
@@ -68,17 +70,33 @@ struct JokeContentView: View {
                                 ShareLink(item: joke.fullJoke)
                             }
                         }
+                        
                         // HStack - Report Joke Button/Unsafe Joke Text
+#if os(iOS)
+                        if let joke {
+                            TranslationView(joke: joke)
+                        }
+#endif
                         HStack(alignment: .top) {
                             if let joke {
-                                Button("Report Joke") {
+                                Button("Report Joke", role: .destructive) {
                                     let jokeToReport = "\(joke.id)\n\(joke.fullJoke)"
+                                    
+#if os(macOS)
                                     let pasteboard = NSPasteboard.general
                                     pasteboard.declareTypes([.string], owner: nil)
                                     pasteboard.setString(jokeToReport, forType: .string)
+                                    
+#else
+                                    let pasteboard = UIPasteboard.general
+                                    pasteboard.string = jokeToReport
+#endif
+                                    
                                     guard let url = URL(string: jokeManager.issueURL) else { return }
                                     openURL(url)
                                 }
+                                .buttonStyle(.bordered)
+                                
                                 Text("You can report an unsafe joke.  The Joke id and content will be on your clipboard.")
                                     .font(.caption)
                                     .lineLimit(nil)

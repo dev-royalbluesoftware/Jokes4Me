@@ -8,22 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		2C7368352D49DEE30046D232 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7368342D49DEE30046D232 /* LaunchAtLogin */; };
+		2CD9BF8B2D556368005CE9B1 /* Jokes4MeiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF872D556368005CE9B1 /* Jokes4MeiOSApp.swift */; };
+		2CD9BF8C2D556368005CE9B1 /* StartTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF892D556368005CE9B1 /* StartTabView.swift */; };
+		2CD9BF8D2D556368005CE9B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD9BF842D556368005CE9B1 /* Preview Assets.xcassets */; };
+		2CD9BF8E2D556368005CE9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD9BF862D556368005CE9B1 /* Assets.xcassets */; };
+		2CD9BF8F2D556368005CE9B1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD9BF882D556368005CE9B1 /* Launch Screen.storyboard */; };
+		2CD9BF922D5563B1005CE9B1 /* AvailableLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF912D5563B1005CE9B1 /* AvailableLanguage.swift */; };
+		2CD9BF942D5563EC005CE9B1 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF932D5563EC005CE9B1 /* TranslationService.swift */; };
+		2CD9BF962D55656D005CE9B1 /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF952D55656D005CE9B1 /* TranslationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C7367CD2D488DF60046D232 /* Jokes4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokes4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C98B65D2D4BFCBF009C3A0F /* Jokes4MeiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokes4MeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD9BF842D556368005CE9B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CD9BF862D556368005CE9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CD9BF872D556368005CE9B1 /* Jokes4MeiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes4MeiOSApp.swift; sourceTree = "<group>"; };
+		2CD9BF882D556368005CE9B1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2CD9BF892D556368005CE9B1 /* StartTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabView.swift; sourceTree = "<group>"; };
+		2CD9BF912D5563B1005CE9B1 /* AvailableLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableLanguage.swift; sourceTree = "<group>"; };
+		2CD9BF932D5563EC005CE9B1 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
+		2CD9BF952D55656D005CE9B1 /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2C2045242D55604E00E3678C /* Exceptions for "Jokes4Me" folder in "Jokes4MeiOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/Category.swift,
+				Models/Joke.swift,
+				Models/JokeType.swift,
+				Models/Language.swift,
+				"Services+Manager/APIService.swift",
+				"Services+Manager/JokeManager.swift",
+				Views/JokeContentView.swift,
+				Views/JokeView.swift,
+			);
+			target = 2C98B65C2D4BFCBF009C3A0F /* Jokes4MeiOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2C7367CF2D488DF60046D232 /* Jokes4Me */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2C2045242D55604E00E3678C /* Exceptions for "Jokes4Me" folder in "Jokes4MeiOS" target */,
+			);
 			path = Jokes4Me;
-			sourceTree = "<group>";
-		};
-		2C98B65E2D4BFCBF009C3A0F /* Jokes4MeiOS */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Jokes4MeiOS;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -51,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				2C7367CF2D488DF60046D232 /* Jokes4Me */,
-				2C98B65E2D4BFCBF009C3A0F /* Jokes4MeiOS */,
+				2CD9BF8A2D556368005CE9B1 /* Jokes4MeiOS */,
 				2C7367CE2D488DF60046D232 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +94,37 @@
 				2C98B65D2D4BFCBF009C3A0F /* Jokes4MeiOS.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2CD9BF852D556368005CE9B1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9BF842D556368005CE9B1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CD9BF8A2D556368005CE9B1 /* Jokes4MeiOS */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9BF872D556368005CE9B1 /* Jokes4MeiOSApp.swift */,
+				2CD9BF882D556368005CE9B1 /* Launch Screen.storyboard */,
+				2CD9BF892D556368005CE9B1 /* StartTabView.swift */,
+				2CD9BF902D55636B005CE9B1 /* Translation */,
+				2CD9BF852D556368005CE9B1 /* Preview Content */,
+				2CD9BF862D556368005CE9B1 /* Assets.xcassets */,
+			);
+			path = Jokes4MeiOS;
+			sourceTree = "<group>";
+		};
+		2CD9BF902D55636B005CE9B1 /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9BF912D5563B1005CE9B1 /* AvailableLanguage.swift */,
+				2CD9BF932D5563EC005CE9B1 /* TranslationService.swift */,
+				2CD9BF952D55656D005CE9B1 /* TranslationView.swift */,
+			);
+			path = Translation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,9 +164,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				2C98B65E2D4BFCBF009C3A0F /* Jokes4MeiOS */,
 			);
 			name = Jokes4MeiOS;
 			packageProductDependencies = (
@@ -166,6 +225,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD9BF8D2D556368005CE9B1 /* Preview Assets.xcassets in Resources */,
+				2CD9BF8E2D556368005CE9B1 /* Assets.xcassets in Resources */,
+				2CD9BF8F2D556368005CE9B1 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD9BF8B2D556368005CE9B1 /* Jokes4MeiOSApp.swift in Sources */,
+				2CD9BF8C2D556368005CE9B1 /* StartTabView.swift in Sources */,
+				2CD9BF922D5563B1005CE9B1 /* AvailableLanguage.swift in Sources */,
+				2CD9BF962D55656D005CE9B1 /* TranslationView.swift in Sources */,
+				2CD9BF942D5563EC005CE9B1 /* TranslationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

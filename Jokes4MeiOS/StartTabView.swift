@@ -14,11 +14,11 @@ struct StartTabView: View {
     var body: some View {
         TabView {
             Tab("Jokes", systemImage: "face.smiling") {
-                Text("Joke View")
+                JokeContentView()
             }
             
             Tab("Info", systemImage: "info.circle") {
-                Text("Joke Distribution View")
+                InfoView()
             }
         }
     }

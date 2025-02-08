@@ -16,6 +16,8 @@
 		2CD9BF922D5563B1005CE9B1 /* AvailableLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF912D5563B1005CE9B1 /* AvailableLanguage.swift */; };
 		2CD9BF942D5563EC005CE9B1 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF932D5563EC005CE9B1 /* TranslationService.swift */; };
 		2CD9BF962D55656D005CE9B1 /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF952D55656D005CE9B1 /* TranslationView.swift */; };
+		2CF51C2C2D5716F800C19B89 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF51C2B2D5716F800C19B89 /* Info.swift */; };
+		2CF51C2E2D57176900C19B89 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF51C2D2D57176900C19B89 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		2CD9BF912D5563B1005CE9B1 /* AvailableLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableLanguage.swift; sourceTree = "<group>"; };
 		2CD9BF932D5563EC005CE9B1 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		2CD9BF952D55656D005CE9B1 /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
+		2CF51C2B2D5716F800C19B89 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		2CF51C2D2D57176900C19B89 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -107,9 +111,10 @@
 		2CD9BF8A2D556368005CE9B1 /* Jokes4MeiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2CD9BF892D556368005CE9B1 /* StartTabView.swift */,
+				2CF51C2A2D5716DE00C19B89 /* Info Tab */,
 				2CD9BF872D556368005CE9B1 /* Jokes4MeiOSApp.swift */,
 				2CD9BF882D556368005CE9B1 /* Launch Screen.storyboard */,
-				2CD9BF892D556368005CE9B1 /* StartTabView.swift */,
 				2CD9BF902D55636B005CE9B1 /* Translation */,
 				2CD9BF852D556368005CE9B1 /* Preview Content */,
 				2CD9BF862D556368005CE9B1 /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				2CD9BF952D55656D005CE9B1 /* TranslationView.swift */,
 			);
 			path = Translation;
+			sourceTree = "<group>";
+		};
+		2CF51C2A2D5716DE00C19B89 /* Info Tab */ = {
+			isa = PBXGroup;
+			children = (
+				2CF51C2B2D5716F800C19B89 /* Info.swift */,
+				2CF51C2D2D57176900C19B89 /* InfoView.swift */,
+			);
+			path = "Info Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,8 @@
 				2CD9BF922D5563B1005CE9B1 /* AvailableLanguage.swift in Sources */,
 				2CD9BF962D55656D005CE9B1 /* TranslationView.swift in Sources */,
 				2CD9BF942D5563EC005CE9B1 /* TranslationService.swift in Sources */,
+				2CF51C2E2D57176900C19B89 /* InfoView.swift in Sources */,
+				2CF51C2C2D5716F800C19B89 /* Info.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

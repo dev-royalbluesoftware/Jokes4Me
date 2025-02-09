@@ -110,14 +110,20 @@ struct JokeContentView: View {
             }
             .navigationTitle("Jokes4Me")
         }
-        .task {
-            await getJoke()
+        .firstOnAppear {
+            Task {
+                await getJoke()
+            }
         }
-        .task(id: category) {
-            await getJoke()
+        .onChange(of: category) {
+            Task {
+                await getJoke()
+            }
         }
-        .task(id: language) {
-            await getJoke()
+        .onChange(of: language) {
+            Task {
+                await getJoke()
+            }
         }
     }
     

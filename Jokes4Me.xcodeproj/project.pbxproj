@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C7368352D49DEE30046D232 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7368342D49DEE30046D232 /* LaunchAtLogin */; };
+		2C8A4D972D5B10C700103A74 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8A4D962D5B10C700103A74 /* WidgetKit.framework */; };
+		2C8A4D992D5B10C700103A74 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8A4D982D5B10C700103A74 /* SwiftUI.framework */; };
+		2C8A4DA42D5B10C800103A74 /* Jokes4MeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2C8A4D942D5B10C700103A74 /* Jokes4MeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CCAEB352D5834B3009E8116 /* ChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAEB342D5834B3009E8116 /* ChartItem.swift */; };
 		2CCAEB382D58385D009E8116 /* FirstOnAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAEB372D58385D009E8116 /* FirstOnAppearModifier.swift */; };
 		2CD9BF8B2D556368005CE9B1 /* Jokes4MeiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9BF872D556368005CE9B1 /* Jokes4MeiOSApp.swift */; };
@@ -22,8 +25,35 @@
 		2CF51C2E2D57176900C19B89 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF51C2D2D57176900C19B89 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2C8A4DA22D5B10C800103A74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7367C52D488DF60046D232 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C8A4D932D5B10C700103A74;
+			remoteInfo = Jokes4MeWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C8A4DA52D5B10C800103A74 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2C8A4DA42D5B10C800103A74 /* Jokes4MeWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2C7367CD2D488DF60046D232 /* Jokes4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokes4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8A4D942D5B10C700103A74 /* Jokes4MeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Jokes4MeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8A4D962D5B10C700103A74 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2C8A4D982D5B10C700103A74 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		2C98B65D2D4BFCBF009C3A0F /* Jokes4MeiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokes4MeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCAEB342D5834B3009E8116 /* ChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItem.swift; sourceTree = "<group>"; };
 		2CCAEB372D58385D009E8116 /* FirstOnAppearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnAppearModifier.swift; sourceTree = "<group>"; };
@@ -54,6 +84,13 @@
 			);
 			target = 2C98B65C2D4BFCBF009C3A0F /* Jokes4MeiOS */;
 		};
+		2C8A4DA92D5B10C800103A74 /* Exceptions for "Jokes4MeWidget" folder in "Jokes4MeWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2C8A4D932D5B10C700103A74 /* Jokes4MeWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -65,6 +102,14 @@
 			path = Jokes4Me;
 			sourceTree = "<group>";
 		};
+		2C8A4D9A2D5B10C700103A74 /* Jokes4MeWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2C8A4DA92D5B10C800103A74 /* Exceptions for "Jokes4MeWidget" folder in "Jokes4MeWidgetExtension" target */,
+			);
+			path = Jokes4MeWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +118,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7368352D49DEE30046D232 /* LaunchAtLogin in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8A4D912D5B10C700103A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8A4D992D5B10C700103A74 /* SwiftUI.framework in Frameworks */,
+				2C8A4D972D5B10C700103A74 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +145,8 @@
 			children = (
 				2C7367CF2D488DF60046D232 /* Jokes4Me */,
 				2CD9BF8A2D556368005CE9B1 /* Jokes4MeiOS */,
+				2C8A4D9A2D5B10C700103A74 /* Jokes4MeWidget */,
+				2C8A4D952D5B10C700103A74 /* Frameworks */,
 				2C7367CE2D488DF60046D232 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,8 +156,18 @@
 			children = (
 				2C7367CD2D488DF60046D232 /* Jokes4Me.app */,
 				2C98B65D2D4BFCBF009C3A0F /* Jokes4MeiOS.app */,
+				2C8A4D942D5B10C700103A74 /* Jokes4MeWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2C8A4D952D5B10C700103A74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A4D962D5B10C700103A74 /* WidgetKit.framework */,
+				2C8A4D982D5B10C700103A74 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2CCAEB362D583834009E8116 /* HelperFiles */ = {
@@ -181,6 +247,28 @@
 			productReference = 2C7367CD2D488DF60046D232 /* Jokes4Me.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2C8A4D932D5B10C700103A74 /* Jokes4MeWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8A4DA82D5B10C800103A74 /* Build configuration list for PBXNativeTarget "Jokes4MeWidgetExtension" */;
+			buildPhases = (
+				2C8A4D902D5B10C700103A74 /* Sources */,
+				2C8A4D912D5B10C700103A74 /* Frameworks */,
+				2C8A4D922D5B10C700103A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2C8A4D9A2D5B10C700103A74 /* Jokes4MeWidget */,
+			);
+			name = Jokes4MeWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = Jokes4MeWidgetExtension;
+			productReference = 2C8A4D942D5B10C700103A74 /* Jokes4MeWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2C98B65C2D4BFCBF009C3A0F /* Jokes4MeiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C98B66A2D4BFCC0009C3A0F /* Build configuration list for PBXNativeTarget "Jokes4MeiOS" */;
@@ -188,10 +276,12 @@
 				2C98B6592D4BFCBF009C3A0F /* Sources */,
 				2C98B65A2D4BFCBF009C3A0F /* Frameworks */,
 				2C98B65B2D4BFCBF009C3A0F /* Resources */,
+				2C8A4DA52D5B10C800103A74 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2C8A4DA32D5B10C800103A74 /* PBXTargetDependency */,
 			);
 			name = Jokes4MeiOS;
 			packageProductDependencies = (
@@ -211,6 +301,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					2C7367CC2D488DF60046D232 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					2C8A4D932D5B10C700103A74 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 					2C98B65C2D4BFCBF009C3A0F = {
@@ -237,12 +330,20 @@
 			targets = (
 				2C7367CC2D488DF60046D232 /* Jokes4Me */,
 				2C98B65C2D4BFCBF009C3A0F /* Jokes4MeiOS */,
+				2C8A4D932D5B10C700103A74 /* Jokes4MeWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2C7367CB2D488DF60046D232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8A4D922D5B10C700103A74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,6 +370,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C8A4D902D5B10C700103A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2C98B6592D4BFCBF009C3A0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +394,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C8A4DA32D5B10C800103A74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C8A4D932D5B10C700103A74 /* Jokes4MeWidgetExtension */;
+			targetProxy = 2C8A4DA22D5B10C800103A74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C7367DA2D488DF70046D232 /* Debug */ = {
@@ -462,6 +578,65 @@
 			};
 			name = Release;
 		};
+		2C8A4DA62D5B10C800103A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UUX2L32WR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jokes4MeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Jokes4MeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.royalbluesoftware.Jokes4Me.Jokes4MeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C8A4DA72D5B10C800103A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UUX2L32WR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jokes4MeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Jokes4MeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.royalbluesoftware.Jokes4Me.Jokes4MeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		2C98B6682D4BFCC0009C3A0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -556,6 +731,15 @@
 			buildConfigurations = (
 				2C7367DD2D488DF70046D232 /* Debug */,
 				2C7367DE2D488DF70046D232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C8A4DA82D5B10C800103A74 /* Build configuration list for PBXNativeTarget "Jokes4MeWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8A4DA62D5B10C800103A74 /* Debug */,
+				2C8A4DA72D5B10C800103A74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

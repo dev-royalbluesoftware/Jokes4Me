@@ -91,6 +91,16 @@
 			);
 			target = 2C8A4D932D5B10C700103A74 /* Jokes4MeWidgetExtension */;
 		};
+		2CED5BC02D6AB255000B1A39 /* Exceptions for "Jokes4Me" folder in "Jokes4MeWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/Category.swift,
+				Models/Joke.swift,
+				Models/JokeType.swift,
+				Models/Language.swift,
+			);
+			target = 2C8A4D932D5B10C700103A74 /* Jokes4MeWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -98,6 +108,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				2C2045242D55604E00E3678C /* Exceptions for "Jokes4Me" folder in "Jokes4MeiOS" target */,
+				2CED5BC02D6AB255000B1A39 /* Exceptions for "Jokes4Me" folder in "Jokes4MeWidgetExtension" target */,
 			);
 			path = Jokes4Me;
 			sourceTree = "<group>";

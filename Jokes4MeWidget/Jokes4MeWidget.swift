@@ -12,23 +12,23 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
+    func placeholder(in context: Context) -> JokeEntry {
+        JokeEntry(date: Date(),joke: Joke.single)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
+    func getSnapshot(in context: Context, completion: @escaping (JokeEntry) -> ()) {
+        let entry = JokeEntry(date: Date(), joke: Joke.twoPart)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [JokeEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
+            let entry = JokeEntry(date: entryDate, joke: Joke.single)
             entries.append(entry)
         }
 
@@ -41,21 +41,31 @@ struct Provider: TimelineProvider {
 //    }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct JokeEntry: TimelineEntry {
     let date: Date
-    let emoji: String
+    let joke: Joke?
 }
 
 struct Jokes4MeWidgetEntryView : View {
+    
+    // MARK: - @Environment Property
+    
+    @Environment(\.widgetFamily) var widgetFamily
+    
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+        if let joke = entry.joke {
+            JokeView(joke: joke)
+            
+        } else {
+            ContentUnavailableView {
+                Text("🥲")
+                    .font(.system(size: widgetFamily == .systemLarge ? 120 : 80))
+            } description: {
+                Text("No Joke Available")
+                    .font(widgetFamily == .systemLarge ? .largeTitle : .title2)
+            }
         }
     }
 }
@@ -78,13 +88,13 @@ struct Jokes4MeWidget: Widget {
 #Preview("Medium Widget", as: .systemMedium) {
     Jokes4MeWidget()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    JokeEntry(date: .now, joke: Joke.single)
+    JokeEntry(date: .now, joke: Joke.twoPart)
 }
 
 #Preview("Large Widget", as: .systemLarge) {
     Jokes4MeWidget()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    JokeEntry(date: .now, joke: Joke.single)
+    JokeEntry(date: .now, joke: Joke.twoPart)
 }
